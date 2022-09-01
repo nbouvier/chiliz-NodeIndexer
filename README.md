@@ -12,7 +12,7 @@ program is possible).
 ## Run the program
 Copy `./config/.env.sample` to `./config/.env`.
 > $ npm i  
-> $ npm run live
+> $ npm run live [-- --port=<port>]
 ## What are the endpoints ?
 ### /tokens-transfer?address=\<address>
 The `tokens-transfer` API allows to get the total amount of CHZ transferred since
