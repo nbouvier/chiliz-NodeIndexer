@@ -10,14 +10,14 @@ Provide two private API endpoints (no need for authentication)
 smart contract or not given its transaction hash (transaction older than the
 program is possible).
 ## Run the program
-Copy ./config/.env.sample to ./config/.env.
-> $ npm i
-> $ npm run live
+Copy `./config/.env.sample` to `./config/.env`.
+> $ npm i  
+> $ npm run live [-- --port=<port>]
 ## What are the endpoints ?
-### /tokens-transfer?address=<address>
-The tokens-transfer API allows to get the total amount of CHZ transferred since
+### /tokens-transfer?address=\<address>
+The `tokens-transfer` API allows to get the total amount of CHZ transferred since
 the start of the program. If an address is passed as a parameter, it will return
 the total amount of CHZ transferred since the start of the program by this address.
 ### /contract-interaction?txHash=<tx_hash>
-The contract-interaction API allows to know if a given transaction did interact
+The `contract-interaction` API allows to know if a given transaction did interact
 or not with the CHZ token contract.
