@@ -2,10 +2,11 @@ import ethers, { Contract, BigNumber } from 'ethers';
 import store from './store.js';
 
 import chzAbi from '../abi/chzAbi.json' assert { type: 'json' };
-import { chzAddress, wsProvider } from '../config/config.js';
+import config from '../config/config.js';
+const { chzAddress, wsProvider } = config;
 
 const toEther = ethers.utils.formatEther;
-
+console.log(chzAddress)
 const indexer = () => {
     const provider = wsProvider ? new ethers.providers.WebSocketProvider(wsProvider) : new ethers.providers.EtherscanProvider();
     const contract = new Contract(chzAddress, chzAbi, provider);
